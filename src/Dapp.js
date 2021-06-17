@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import { Web3Context } from "web3-hooks";
 import { FaucetContext } from "./App";
 import {
@@ -15,6 +15,12 @@ import {
   Text,
   Spacer,
   Image,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
 } from "@chakra-ui/react";
 
 function Dapp() {
@@ -27,6 +33,10 @@ function Dapp() {
   //gestion des erreurs
   const [error, setError] = useState("");
   const [balance, setBalance] = useState(null);
+  const [isOpen, setIsOpen] = useState(false)
+  const onClose = () => setIsOpen(false)
+  const cancelRef = useRef()
+
 
   const handleChange = (e) => {
     e.target.id === "owner"
@@ -126,9 +136,35 @@ function Dapp() {
               <p>account: {web3State.account}</p>
               <p>Balance: {web3State.balance}</p>
             </GridItem>
-            <Button bg="#3399FF" m={5} onClick={handleClickSendToken}>
+            <Button bg="#3399FF" m={5} onClick={() => setIsOpen(true)} >
               sendToken
             </Button>
+            <AlertDialog
+        isOpen={isOpen}
+        leastDestructiveRef={cancelRef}
+        onClose={onClose}
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent>
+            <AlertDialogHeader fontSize="lg" fontWeight="bold">
+              sendToken
+            </AlertDialogHeader>
+
+            <AlertDialogBody>
+              Are you sure? You can't undo this action afterwards.
+            </AlertDialogBody>
+
+            <AlertDialogFooter>
+              <Button ref={cancelRef} onClick={onClose}>
+                Cancel
+              </Button>
+              <Button colorScheme="red" onClick={onClose} ml={3}>
+                sendToken
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
             <GridItem rowSpan={2} colSpan={1}>
               <Text color="white" as="samp">
                 Balance: {balance}
