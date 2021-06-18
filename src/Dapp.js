@@ -130,9 +130,13 @@ function Dapp() {
               <p>Web3: {web3State.isWeb3 ? "injected" : "no-injected"}</p>
               <p>logged: {web3State.isLogged ? "yes" : "no"}</p>
               {!web3State.isLogged && (
-                <>
-                  <button onClick={login}>login</button>
-                </>
+            <Button
+              bg="#181818"
+              color="grey"
+              onClick={login}
+            >
+              login
+            </Button>
               )}
               <p>Network id: {web3State.chainId}</p>
               <p>Network name: {web3State.networkName}</p>
