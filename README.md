@@ -1,4 +1,4 @@
-# **_SAGISTAMI FAUCET DAPP_** ![Rhino Team](./src/logo_large.png)
+# **_SAGISTAMI FAUCET DAPP_** ![Rhino Team](./src/logo_small.png)
 
 [![built-with openzeppelin](https://img.shields.io/badge/built%20with-OpenZeppelin-3677FF)](https://docs.openzeppelin.com/)
 
@@ -19,7 +19,7 @@
 
 - Token.sol
 
-  It's a simple ERC-20 token that is implemented using @openzeppelin's smart contract suite. Currently this contract will automatically mint 8000 tokens when deployed.
+  It's a simple ERC-20 token that is implemented using @openzeppelin's smart contract suite. Currently, by default, this contract will automatically mint 8000 tokens when deployed.
 
 ```
 
@@ -41,7 +41,7 @@ contract Token is Ownable, ERC20 {
 - Faucet.sol
 
   It's the actual Faucet contract. It's a configurable contract that can be deployed for any ERC-20 token and the amount as well as the frequency for requesting funds from the faucet can be configured.
-  
+
 ---
 
 ## Installation
