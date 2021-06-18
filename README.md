@@ -6,6 +6,11 @@
 
 #### _Developers : LokiDieKatze, StellaGreen, Benmissi-A, GuillaumeB75_
 
+[![create-buy LokieDieKatze](https://img.shields.io/badge/create%20buy-LokiDieKatze-FFA07A)](https://github.com/LokiDieKatze)
+[![create-buy StellaGreen](https://img.shields.io/badge/create%20buy-StellaGreen-FFA07A)](https://github.com/StellaGreen)
+[![create-buy Benmissi-A](https://img.shields.io/badge/create%20buy-Benmissi-FFA07A)](https://github.com/Benmissi-A)
+[![create-buy LokieDieKatze](https://img.shields.io/badge/create%20buy-GuillaumeB75-FFA07A)](https://github.com/GuillaumeB75)
+
 ---
 
 ## Description
