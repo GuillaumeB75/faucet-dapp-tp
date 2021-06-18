@@ -11,13 +11,13 @@
 ## Description
 
 - testnet use : Rinkeby
-- SAGISTAMI FAUCET dApp
+- **SAGISTAMI FAUCET dApp**
 
   This repository contains a simple ERC-20 faucet dApp that will distibute an ERC-20 token called SAGISTAMI to whomever interacts with our dApp.
 
 ## Smart contracts
 
-- Token.sol
+- **Token.sol**
 
   It's a simple ERC-20 token that is implemented using @openzeppelin's smart contract suite. Currently, by default, this contract will automatically mint 8000 tokens when deployed.
 
@@ -38,7 +38,7 @@ contract Token is Ownable, ERC20 {
 
 ```
 
-- Faucet.sol
+- **Faucet.sol**
 
   It's the actual Faucet contract. It's a configurable contract that can be deployed for any ERC-20 token and the amount as well as the frequency for requesting funds from the faucet can be configured.
 
