@@ -51,17 +51,9 @@ contract Token is Ownable, ERC20 {
 
 ## Installation
 
-To use this dApp you need to "git clone" those two repositories :
+To use this dApp you need to "git clone" this repository :
 
-- Back-end :
-
-```
-git clone https://github.com/Benmissi-A/faucet-hardhat-tp
-cd faucet-hardhat-tp
-yarn
-```
-
-- Front-end :
+- faucet-dapp :
 
 ```
 git clone https://github.com/Benmissi-A/faucet-dapp-tp
