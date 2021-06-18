@@ -45,7 +45,7 @@ contract Token is Ownable, ERC20 {
 
 - **Faucet.sol**
 
-  It's the actual Faucet contract. It's a configurable contract that can be deployed for any ERC-20 token and the amount as well as the frequency for requesting funds from the faucet can be configured.By default, the frequency is set to 3 days.
+  It's the actual Faucet contract. It's a configurable contract that can be deployed for any ERC-20 token and the amount as well as the frequency for requesting funds from the faucet can be configured. By default, the frequency is set to 3 days.
 
 ---
 
